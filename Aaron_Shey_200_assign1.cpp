@@ -21,10 +21,10 @@ int getLowestInRow(int[][COLS], int);
 int main() {
   const int ROWS = 4;
 
-  int testArray[ROWS][COLS] = {{1, 2, 3, 4, 5},
-                               {6, 7, 8, 9, 10},
-                               {11, 12, 13, 14, 15},
-                               {16, 17, 18, 19, 20}};
+  int testArray[ROWS][COLS] = {{0, 1, 1, 1, 1},
+                               {1, 1, 1, 1, 10},
+                               {1, 1, 9,1, 0},
+                               {6, 7, 8, 6, 9}};
 
   cout << "The total of the array elements is " << getTotal(testArray, ROWS)
        << endl;
