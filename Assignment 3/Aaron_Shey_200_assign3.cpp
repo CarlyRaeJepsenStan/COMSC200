@@ -22,8 +22,8 @@ int main() {
     cout << "The computer's balance after round " << round << ": "
          << computerScore << "\n";
     if (computerScore > 1.00 || playerScore > 1.00) {
-      cout << "Your ending balance:" << playerScore << "\n";
-      cout << "The computer's ending balance:" << computerScore << "\n";
+      cout << "Your ending balance: " << playerScore << "\n";
+      cout << "The computer's ending balance: " << computerScore << "\n";
       if (computerScore > playerScore) {
         cout << "The computer won!\n";
       } else if (computerScore == playerScore) {
