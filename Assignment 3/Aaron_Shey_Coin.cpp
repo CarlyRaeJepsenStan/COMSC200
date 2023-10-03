@@ -13,6 +13,7 @@ Coin::Coin(float in) : value(in) { toss(); }
 //  I didn't have to use Coin:: because the body of a member function has access
 //  to everything else in a class.
 void Coin::toss() {
+
   bool st = (rand() % 2 == 0);
   sideUp = (st) ? "heads" : "tails";
   sideValue = (st) ? 1 : 0;

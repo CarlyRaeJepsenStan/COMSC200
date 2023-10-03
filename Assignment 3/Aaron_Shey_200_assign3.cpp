@@ -4,6 +4,7 @@ using namespace std;
 // 7. This is a function prototype.  See below for definition.
 float roll(Coin coins[3]);
 int main() {
+  srand(time(0));
   Coin coins[3] = {Coin(0.25), Coin(0.10), Coin(0.05)};
   float computerScore = 0.00, playerScore = 0.00;
 
