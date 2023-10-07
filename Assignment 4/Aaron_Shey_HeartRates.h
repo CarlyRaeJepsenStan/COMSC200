@@ -1,5 +1,5 @@
 #include "string"
-#include "vector";
+#include "vector"
 using namespace std;
 #ifndef HEARTRATE_H
 #define HEARTRATE_H

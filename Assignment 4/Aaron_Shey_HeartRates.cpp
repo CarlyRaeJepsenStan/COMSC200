@@ -36,18 +36,19 @@ string HeartRate::getBirthDateFull() {
 }
 
 int HeartRate::getAge(vector<int> today) {
-  int age;
+  int age = 0;
 
   if (today[0] >= birthDay && today[1] >= birthMonth) {
-    age = today[3] - birthYear;
+    age = today[2] - birthYear;
   } else {
-    age = (today[3] - birthYear) - 1;
+    age = (today[2] - birthYear) - 1;
   }
+  return age;
 }
 
 int HeartRate::getMaximumHeartRate(int age) { return 220 - age; }
 
 vector<double> HeartRate::getTargetHeartRate(int maxHR) {
-  vector<double> result{maxHR * 0.85, maxHR * 0.5};
+  vector<double> result = {maxHR * 0.85, maxHR * 0.5};
   return result;
 }
