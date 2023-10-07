@@ -37,10 +37,13 @@ string HeartRate::getBirthDateFull() {
 
 int HeartRate::getAge(vector<int> today) {
   int age = 0;
-
+  // 5. if the month and day are greater than the birthday, the user is as old
+  // as this year minus their birth year
   if (today[0] >= birthDay && today[1] >= birthMonth) {
     age = today[2] - birthYear;
   } else {
+    // 6.  Otherwise, their age is this year minus their birth year, and then
+    // minus 1.
     age = (today[2] - birthYear) - 1;
   }
   return age;

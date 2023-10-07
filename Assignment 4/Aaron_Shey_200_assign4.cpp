@@ -3,6 +3,7 @@
 #include <sstream>
 #include <vector>
 using namespace std;
+// 7.  These are function prototypes to split the input by spaces.
 vector<string> split(string &input);
 vector<int> splitInt(string &input);
 int main() {
@@ -37,10 +38,16 @@ int main() {
        << "Maximum Heart Rate: " << maxHeartRate << "\n"
        << "Target Heart Rate: " << hrRange[1] << "-" << hrRange[0] << "\n";
 }
+
+// 8.  This function splits a string into many smaller strings.  The string is
+// passed by value.
 vector<string> split(string &input) {
   vector<string> output;
   istringstream iss(input);
   string el;
+  // 9.  By using the library istringstream, splitting a string into spaces is
+  // made much easier and can be accomplished by simply looping through a
+  // getline function
   while (getline(iss, el, ' ')) {
     output.push_back(el);
   }
@@ -52,6 +59,7 @@ vector<int> splitInt(string &input) {
   istringstream iss(input);
   string el;
   while (getline(iss, el, ' ')) {
+    // 10.  This function splits a string into ints using the stoi function.
     output.push_back(stoi(el));
   }
   return output;
