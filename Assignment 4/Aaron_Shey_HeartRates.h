@@ -1,4 +1,5 @@
 #include "string"
+#include "vector";
 using namespace std;
 #ifndef HEARTRATE_H
 #define HEARTRATE_H
@@ -11,7 +12,7 @@ private:
   int birthDay, birthMonth, birthYear;
 
 public:
-  HeartRate(int, int, int);
+  HeartRate(int, int, int, string, string);
   void setFirstName(string in);
   string getFirstName() const;
 
@@ -26,6 +27,13 @@ public:
 
   void setBirthYear(int year);
   int getBirthYear() const;
+
+  string getBirthDateFull();
+
+  int getAge(vector<int>);
+
+  int getMaximumHeartRate(int);
+  vector<double> getTargetHeartRate(int);
 };
 
 #endif
