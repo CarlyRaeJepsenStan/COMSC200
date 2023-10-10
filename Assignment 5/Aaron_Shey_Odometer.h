@@ -8,7 +8,7 @@ private:
 
 public:
   Odometer();
-  Odometer(FuelGauge &gauge);
+  Odometer(FuelGauge &, int);
   int getMileage() const;
   void incrementMileage();
 };
