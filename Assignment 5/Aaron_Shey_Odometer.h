@@ -4,10 +4,10 @@
 class Odometer {
 private:
   int m;
+  // 6.  I chose to use a reference for the class.
   FuelGauge &fuelGauge;
 
 public:
-  Odometer();
   Odometer(FuelGauge &, int);
   int getMileage() const;
   void incrementMileage();
