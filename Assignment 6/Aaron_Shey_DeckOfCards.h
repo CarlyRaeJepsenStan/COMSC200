@@ -1,8 +1,8 @@
 #include "Aaron_Shey_Card.h"
+#include <cstdlib>
+#include <string>
 #include <vector>
 using namespace std;
-#ifndef DECKOFCARDS_H
-#define DECKOFCARDS_H
 class DeckOfCards {
 private:
   vector<Card> deck;
@@ -13,4 +13,3 @@ public:
   void shuffle();
   Card dealCard();
 };
-#endif
