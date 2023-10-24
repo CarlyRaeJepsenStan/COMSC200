@@ -24,12 +24,19 @@ vector<bool> IntegerSet::unionOfSets(IntegerSet in) {
 }
 vector<bool> IntegerSet::intersectionOfSets(IntegerSet in) {
   vector<bool> out(100, false);
-
-
+  if (this[i]==true || in[i] == true) {
+      out[i]=true;
+    }
+  return out;
 }
 
 vector<bool> IntegerSet::inputSet() {
   int u; 
-  
+  while (u > 0) {
+    cout << "Enter a number: ";
+    cin >> u; 
+    
+  }
+
 }
 #endif
