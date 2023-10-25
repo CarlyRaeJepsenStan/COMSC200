@@ -4,6 +4,12 @@
 using namespace std;
 #ifndef INTEGERSET_H
 #define INTEGERSET_H
+bool IntegerSet::operator[](int i) {
+  return internal[i];
+}
+IntegerSet IntegerSet::operator=(const IntegerSet i) {
+  return this;
+}
 IntegerSet::IntegerSet() : internal(vector<bool>(100, false)){};
 
 IntegerSet::IntegerSet(int array[], int size) {
