@@ -34,9 +34,34 @@ vector<bool> IntegerSet::inputSet() {
   int u; 
   while (u > 0) {
     cout << "Enter a number: ";
-    cin >> u; 
+    cin >> u;
+    if (u > 0) {
+      internal[u]=true;
+    } else {
+      continue;
+    }
     
   }
 
 }
+
+bool IntegerSet::isEqualTo(IntegerSet) {
+  return (this == IntegerSet);
+}
+
+void IntegerSet::insertElement(int m) {
+  internal[m] = true;
+}
+
+void IntegerSet::deleteElement(int k) {
+  internal[k] = false;
+}
+
+void IntegerSet::printSet() {
+  for (int i = 0; i < 100; i++) {
+    cout << internal[i];
+  }
+}
+
+
 #endif
