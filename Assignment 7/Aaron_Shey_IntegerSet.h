@@ -5,13 +5,14 @@ private:
   vector<bool> internal;
 
 public:
+  IntegerSet operator=(const IntegerSet);
   IntegerSet();
   IntegerSet(int[], int);
-  vector<bool> unionOfSets(IntegerSet);
-  vector<bool> intersectionOfSets(IntegerSet);
-  bool isEqualTo();
+  IntegerSet unionOfSets(IntegerSet);
+  IntegerSet intersectionOfSets(IntegerSet);
+  bool isEqualTo(IntegerSet);
   void insertElement(int);
   void deleteElement(int);
   void printSet();
-  void inputSet();
+  IntegerSet inputSet();
 };
