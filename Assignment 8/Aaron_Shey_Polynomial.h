@@ -6,11 +6,15 @@ private:
   vector<int> internal;
 
 public:
+  Polynomial();
+  void enterTerms();
+  int operator[](int);
   Polynomial operator+(const Polynomial);
   Polynomial operator-(const Polynomial);
   Polynomial operator=(const Polynomial);
   Polynomial operator+=(const Polynomial);
   Polynomial operator-=(const Polynomial);
+  void printPolynomial();
 
   Polynomial();
 };

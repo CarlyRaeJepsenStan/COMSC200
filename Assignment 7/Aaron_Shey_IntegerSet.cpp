@@ -13,7 +13,6 @@ bool validate(int in) {
   }
   return out;
 }
-
 IntegerSet IntegerSet::operator=(const IntegerSet i) { return *this; }
 
 bool IntegerSet::operator[](int i) { return internal[i]; }
