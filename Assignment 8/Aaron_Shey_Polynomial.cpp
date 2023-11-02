@@ -13,12 +13,16 @@ void Polynomial::enterTerms() {
   int degree = 0, i = 0;
   cout << "Enter number of polynomial terms: ";
   cin >> degree;
+  int prev = 0;
 
   while (i <= degree) {
     int exponent = 0;
     cout << "Enter exponent: ";
     cin >> exponent;
-
+    for (int prev; prev < exponent; prev++) {
+      internal[i] = 0;
+    }
+    prev = exponent;
     cout << "Enter coefficient: ";
     cin >> internal[exponent];
     i++;

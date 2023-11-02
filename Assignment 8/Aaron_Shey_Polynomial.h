@@ -15,6 +15,4 @@ public:
   Polynomial operator+=(const Polynomial);
   Polynomial operator-=(const Polynomial);
   void printPolynomial();
-
-  Polynomial();
 };
