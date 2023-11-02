@@ -6,7 +6,8 @@ using namespace std;
 #define POLYNOMIAL_H
 
 Polynomial::Polynomial() { vector<int> internal(5, 0); };
-int Polynomial::operator[](int in) { return internal[in]; }
+int Polynomial::operator[](int in) { return internal[in]; };
+
 // replace all the unused exponent locations with 0 along with implement adding
 // so you can enter the same exponent twice
 void Polynomial::enterTerms() {
@@ -29,13 +30,15 @@ void Polynomial::enterTerms() {
   }
 }
 
-Polynomial Polynomial::operator+(const Polynomial n) {
+Polynomial Polynomial::operator+(const Polynomial &n) {
   Polynomial temp;
   for (int i = 0; i < 5; i++) {
-    temp[i] = internal[i];
+    temp[i] = internal[i] + n.internal[i];
   }
   return temp;
 }
+
+Polynomial Polynomial::operator=(const Polynomial n) { return *this; }
 
 void Polynomial::printPolynomial() {
   for (int i = 0; i < internal.size(); i++) {

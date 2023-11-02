@@ -9,7 +9,7 @@ public:
   Polynomial();
   void enterTerms();
   int operator[](int);
-  Polynomial operator+(const Polynomial);
+  Polynomial operator+(const Polynomial &);
   Polynomial operator-(const Polynomial);
   Polynomial operator=(const Polynomial);
   Polynomial operator+=(const Polynomial);
