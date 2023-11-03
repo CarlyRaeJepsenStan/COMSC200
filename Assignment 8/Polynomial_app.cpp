@@ -7,8 +7,7 @@ int main() {
 
   a.enterTerms();
   b.enterTerms();
-  // t = a; // save the value of a
-  cout << "\nt is:\n";
+  t = a; 
   t.printPolynomial();
   cout << "\nFirst polynomial is:\n";
   a.printPolynomial();
