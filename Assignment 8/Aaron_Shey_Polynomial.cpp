@@ -20,6 +20,7 @@ void Polynomial::enterTerms() {
     int exponent = 0;
     cout << "Enter exponent: ";
     cin >> exponent;
+    // this line fills all the space between each exponent with 0s
     for (int prev; prev < exponent; prev++) {
       internal[i] = 0;
     }
@@ -30,20 +31,29 @@ void Polynomial::enterTerms() {
   }
 }
 
-Polynomial Polynomial::operator+(const Polynomial &n) {
-  Polynomial temp;
+Polynomial Polynomial::operator+=(const Polynomial &n) {
   for (int i = 0; i < 5; i++) {
-    temp[i] = internal[i] + n.internal[i];
+    internal[i] = internal[i] + n.internal[i];
   }
-  return temp;
+  return *this;
 }
 
-Polynomial Polynomial::operator=(const Polynomial n) { return *this; }
+Polynomial Polynomial::operator+(const Polynomial &n) { return *this += n; }
+
+Polynomial Polynomial::operator-=(const Polynomial &n) {
+  for (int i = 0; i < 5; i++) {
+    internal[i] = internal[i] - n.internal[i];
+  }
+  return *this;
+}
+Polynomial Polynomial::operator=(const Polynomial &n) { return *this; }
 
 void Polynomial::printPolynomial() {
   for (int i = 0; i < internal.size(); i++) {
     if (internal[i] != 0) {
-      cout << internal[i] << "x^" << i << " + ";
+      cout << internal[i] << "x^" << i;
+      if (i != internal.size() - 1)
+        cout << " + ";
     }
   }
   cout << "\n";
