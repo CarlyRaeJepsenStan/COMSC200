@@ -2,4 +2,8 @@
 #include <iostream>
 using namespace std;
 
-Polynomial::Polynomial() : numerator(1), denominator(1) {}
+RationalNumber::RationalNumber() : numerator(1), denominator(1){};
+
+void RationalNumber::printRational() {
+  cout << "( " << numerator << " / " << denominator << "\n";
+}
