@@ -5,6 +5,9 @@ private:
 public:
   RationalNumber();
   RationalNumber(int, int);
+
+  RationalNumber reduce(const RationalNumber &);
+
   RationalNumber operator+=(const RationalNumber &);
   RationalNumber operator+(const RationalNumber &);
   RationalNumber operator-=(const RationalNumber &);
@@ -16,10 +19,10 @@ public:
   RationalNumber operator/=(const RationalNumber &);
   RationalNumber operator/(const RationalNumber &);
 
-  RationalNumber operator>(const RationalNumber &);
-  RationalNumber operator<(const RationalNumber &);
-  RationalNumber operator>=(const RationalNumber &);
-  RationalNumber operator<=(const RationalNumber &);
+  bool operator>(const RationalNumber &);
+  bool operator<(const RationalNumber &);
+  bool operator>=(const RationalNumber &);
+  bool operator<=(const RationalNumber &);
 
   RationalNumber operator==(const RationalNumber &);
   RationalNumber operator!=(const RationalNumber &);
