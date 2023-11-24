@@ -18,6 +18,7 @@ void Account::debit(double i) {
 }
 const double Account::getBalance() { return balance; }
 
+void Account::setBalance(double i) { balance = i; }
 // Assignment 11 code:
 
 Account Account::operator=(const Account &a) {

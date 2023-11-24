@@ -15,9 +15,9 @@ public:
   // Assignment 11 code:
   SavingsAccount operator=(const SavingsAccount &);
   friend std::ostream &operator<<(std::ostream &, SavingsAccount &);
-  friend SavingsAccount operator+(const SavingsAccount &, double);
-  friend SavingsAccount operator+(double, const SavingsAccount &);
-  friend SavingsAccount operator-(const SavingsAccount &, double);
+  friend SavingsAccount operator+(SavingsAccount &, double);
+  friend SavingsAccount operator+(double, SavingsAccount &);
+  friend SavingsAccount operator-(SavingsAccount &, double);
 
   SavingsAccount operator+=(const SavingsAccount &);
   SavingsAccount operator-=(const SavingsAccount &);

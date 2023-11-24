@@ -11,6 +11,7 @@ public:
   virtual void credit(double);
   virtual void debit(double);
   const double getBalance();
+  void setBalance(double);
 
   // Assignment 11 code:
   Account operator=(const Account &);

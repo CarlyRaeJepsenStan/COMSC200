@@ -14,11 +14,11 @@ public:
   void setFee(double);
 
   // Assignment 11 code:
-  CheckingAccount operator=(const CheckingAccount &);
+  CheckingAccount operator=(CheckingAccount &);
   friend std::ostream &operator<<(std::ostream &, CheckingAccount &);
-  friend CheckingAccount operator+(const CheckingAccount &, double);
+  friend CheckingAccount operator+(CheckingAccount &, double);
   friend CheckingAccount operator+(double, const CheckingAccount &);
-  friend CheckingAccount operator-(const CheckingAccount &, double);
+  friend CheckingAccount operator-(CheckingAccount &, double);
 
   CheckingAccount operator+=(const CheckingAccount &);
   CheckingAccount operator-=(const CheckingAccount &);

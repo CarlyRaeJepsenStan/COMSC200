@@ -24,8 +24,9 @@ double CheckingAccount::getFee() { return fee; }
 void CheckingAccount::setFee(double f) { this->fee = f; }
 
 // Assignment 11 code:
-CheckingAccount CheckingAccount::operator=(const CheckingAccount &a) {
+CheckingAccount CheckingAccount::operator=(CheckingAccount &a) {
   fee = a.fee;
+  this->setBalance(a.getBalance());
   return *this;
 }
 
@@ -34,9 +35,23 @@ std::ostream &operator<<(std::ostream &os, CheckingAccount &a) {
   return os;
 }
 
-CheckingAccount operator+(const CheckingAccount &a, double b) {
+CheckingAccount operator+(CheckingAccount &a, double b) {
   CheckingAccount c;
-  c.setFee(0);
-  c.balance = a.getBalance() + b;
+  c.setFee(a.getFee());
+  c.setBalance(a.getBalance() + b);
+  return c;
+}
+
+CheckingAccount operator+(double a, CheckingAccount &b) {
+  CheckingAccount c;
+  c.setFee(b.getFee());
+  c.setBalance(b.getBalance() + a);
+  return c;
+}
+
+CheckingAccount operator-(CheckingAccount &a, double b) {
+  CheckingAccount c;
+  c.setFee(a.getFee());
+  c.setBalance(a.getBalance() - b);
   return c;
 }
