@@ -20,7 +20,7 @@ public:
   friend CheckingAccount operator+(double, const CheckingAccount &);
   friend CheckingAccount operator-(CheckingAccount &, double);
 
-  CheckingAccount operator+=(const CheckingAccount &);
-  CheckingAccount operator-=(const CheckingAccount &);
+  CheckingAccount operator+=(double);
+  CheckingAccount operator-=(double);
 };
 #endif

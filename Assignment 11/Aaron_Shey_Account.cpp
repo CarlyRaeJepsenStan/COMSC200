@@ -49,12 +49,12 @@ Account operator-(const Account &a, double b) {
   return c;
 }
 
-Account Account::operator+=(const Account &a) {
-  balance += a.balance;
+Account Account::operator+=(double a) {
+  balance += a;
   return *this;
 }
 
-Account Account::operator-=(const Account &a) {
-  balance -= a.balance;
+Account Account::operator-=(double a) {
+  balance -= a;
   return *this;
 }

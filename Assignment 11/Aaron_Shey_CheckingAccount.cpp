@@ -55,3 +55,13 @@ CheckingAccount operator-(CheckingAccount &a, double b) {
   c.setBalance(a.getBalance() - b);
   return c;
 }
+
+CheckingAccount CheckingAccount::operator+=(double a) {
+  this->setBalance(this->getBalance() + a);
+  return *this;
+}
+
+CheckingAccount CheckingAccount::operator-=(double a) {
+  this->setBalance(this->getBalance() - a);
+  return *this;
+}

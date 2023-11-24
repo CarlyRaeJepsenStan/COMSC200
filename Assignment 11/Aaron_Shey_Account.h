@@ -20,7 +20,7 @@ public:
   friend Account operator+(double, const Account &);
   friend Account operator-(const Account &, double);
 
-  Account operator+=(const Account &);
-  Account operator-=(const Account &);
+  Account operator+=(double);
+  Account operator-=(double);
 };
 #endif

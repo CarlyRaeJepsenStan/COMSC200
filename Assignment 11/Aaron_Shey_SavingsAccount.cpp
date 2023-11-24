@@ -15,7 +15,7 @@ double SavingsAccount::getInterestRate() { return interestRate; }
 
 // Assignment 11 code:
 
-SavingsAccount SavingsAccount::operator=(const SavingsAccount &a) {
+SavingsAccount SavingsAccount::operator=(SavingsAccount &a) {
   interestRate = a.getInterestRate();
   this->setBalance(a.getBalance());
   return *this;
@@ -26,4 +26,33 @@ std::ostream &operator<<(std::ostream &os, SavingsAccount &a) {
   return os;
 }
 
-SavingsAccount operator+()
+SavingsAccount operator+(SavingsAccount &a, double b) {
+  SavingsAccount c;
+  c.setBalance(a.getBalance() + b);
+  c.interestRate = a.getInterestRate();
+  return c;
+}
+
+SavingsAccount operator+(double b, SavingsAccount &a) {
+  SavingsAccount c;
+  c.setBalance(a.getBalance() + b);
+  c.interestRate = a.getInterestRate();
+  return c;
+}
+
+SavingsAccount operator-(SavingsAccount &a, double b) {
+  SavingsAccount c;
+  c.setBalance(a.getBalance() - b);
+  c.interestRate = a.getInterestRate();
+  return c;
+}
+
+SavingsAccount SavingsAccount::operator+=(double a) {
+  this->setBalance(this->getBalance() + a);
+  return *this;
+}
+
+SavingsAccount SavingsAccount::operator-=(double a) {
+  this->setBalance(this->getBalance() - a);
+  return *this;
+}
