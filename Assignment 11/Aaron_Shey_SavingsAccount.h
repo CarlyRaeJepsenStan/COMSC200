@@ -10,10 +10,10 @@ public:
   SavingsAccount();
   SavingsAccount(double, double);
   double calculateInterest();
-  double getInterestRate();
+  double getInterestRate() const;
 
   // Assignment 11 code:
-  SavingsAccount operator=(SavingsAccount &);
+  SavingsAccount operator=(const SavingsAccount &);
   friend std::ostream &operator<<(std::ostream &, SavingsAccount &);
   friend SavingsAccount operator+(SavingsAccount &, double);
   friend SavingsAccount operator+(double, SavingsAccount &);

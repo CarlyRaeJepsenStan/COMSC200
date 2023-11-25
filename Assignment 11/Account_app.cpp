@@ -12,7 +12,6 @@ int main() {
 
   cout << fixed << setprecision(2);
 
-  // display initial balance of each object
   cout << "account1 balance: $" << account1 << endl;
   cout << "account3 balance: $" << account3 << endl;
   cout << "account2 balance: $" << account2 << endl;
@@ -30,21 +29,30 @@ int main() {
   cout << "account2 balance: $" << account2 << endl;
   cout << "account3 balance: $" << account3 << endl;
 
-  double credit1 = 3.0, credit2 = 1.0, credit3 = 1.0;
+  double credit1 = 3.0, credit2 = 3.0, credit3 = 3.0;
   cout << "\nCrediting " << credit1 << " to account1." << endl;
-  account1 += credit1 / 3;
-  account1 = credit1 / 3 + account1;
-  account1 = account1 + credit1 / 3;
+  // 8. Demonstrate the compound addition operator.
+  account1 += credit1 / 3.0;
+  // 9.  Demonstrate the addition operator with a double on the right hand and
+  // an account on the left hand.
+  account1 = credit1 / 3.0 + account1;
+  // 10.  Demonstrate the addition operator, but with a double on the left hand
+  // and a account on the right hand.
+  account1 = account1 + credit1 / 3.0;
   cout << "\nCrediting " << credit2 << " to account2." << endl;
-  account2 += credit2;
+  // 11.  Show off this operator for the rest of the account types.
+  account2 += credit2 / 3.0;
+  account2 = credit2 / 3.0 + account2;
+  account2 = account2 + credit2 / 3.0;
   cout << "\nCrediting " << credit3 << " to account3." << endl;
-  account3 += credit3;
+  account3 += credit3 / 3.0;
+  account3 = credit3 / 3.0 + account3;
+  account3 = account3 + credit3 / 3.0;
 
   cout << "\naccount1 balance: $" << account1 << endl;
   cout << "account2 balance: $" << account2.getBalance() << endl;
   cout << "account3 balance: $" << account3.getBalance() << endl;
 
-  // add interest to SavingsAccount object account2
   double interestEarned = account2.calculateInterest();
   cout << "\nAdding $" << interestEarned << " interest to account2." << endl;
   account2.credit(interestEarned);

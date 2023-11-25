@@ -11,11 +11,11 @@ double SavingsAccount::calculateInterest() {
   return getBalance() * interestRate;
 }
 
-double SavingsAccount::getInterestRate() { return interestRate; }
+double SavingsAccount::getInterestRate() const { return interestRate; }
 
 // Assignment 11 code:
-
-SavingsAccount SavingsAccount::operator=(SavingsAccount &a) {
+// 7.  Again, here the code is pretty much the same as the two previous files.
+SavingsAccount SavingsAccount::operator=(const SavingsAccount &a) {
   interestRate = a.getInterestRate();
   this->setBalance(a.getBalance());
   return *this;

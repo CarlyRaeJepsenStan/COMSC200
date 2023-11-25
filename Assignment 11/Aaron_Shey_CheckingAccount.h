@@ -12,9 +12,8 @@ public:
   void debit(double);
   double getFee();
   void setFee(double);
-
   // Assignment 11 code:
-  CheckingAccount operator=(CheckingAccount &);
+  CheckingAccount operator=(const CheckingAccount &);
   friend std::ostream &operator<<(std::ostream &, CheckingAccount &);
   friend CheckingAccount operator+(CheckingAccount &, double);
   friend CheckingAccount operator+(double, const CheckingAccount &);

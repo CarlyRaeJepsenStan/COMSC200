@@ -16,11 +16,13 @@ void Account::debit(double i) {
   } else
     balance -= i;
 }
-const double Account::getBalance() { return balance; }
+double Account::getBalance() const { return balance; }
 
 void Account::setBalance(double i) { balance = i; }
-// Assignment 11 code:
 
+// Assignment 11 code:
+// 4.  None of these operators were particularly exciting - they were fairly
+// straightforward.
 Account Account::operator=(const Account &a) {
   balance = a.balance;
   return *this;

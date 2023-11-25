@@ -22,14 +22,16 @@ void CheckingAccount::debit(double i) {
 double CheckingAccount::getFee() { return fee; }
 
 void CheckingAccount::setFee(double f) { this->fee = f; }
-
 // Assignment 11 code:
-CheckingAccount CheckingAccount::operator=(CheckingAccount &a) {
+CheckingAccount CheckingAccount::operator=(const CheckingAccount &a) {
+  // 5.  This is where the setBalance operator is necessary.  it works because
+  // of the Account part of this class.
   fee = a.fee;
   this->setBalance(a.getBalance());
   return *this;
 }
-
+// 6.  The rest of the code isn't very exciting.  It remains mostly the same as
+// the Account class.
 std::ostream &operator<<(std::ostream &os, CheckingAccount &a) {
   os << a.getBalance() << endl;
   return os;
