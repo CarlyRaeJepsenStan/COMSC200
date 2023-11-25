@@ -16,7 +16,7 @@ public:
   CheckingAccount operator=(const CheckingAccount &);
   friend std::ostream &operator<<(std::ostream &, CheckingAccount &);
   friend CheckingAccount operator+(CheckingAccount &, double);
-  friend CheckingAccount operator+(double, const CheckingAccount &);
+  friend CheckingAccount operator+(double, CheckingAccount &);
   friend CheckingAccount operator-(CheckingAccount &, double);
 
   CheckingAccount operator+=(double);
