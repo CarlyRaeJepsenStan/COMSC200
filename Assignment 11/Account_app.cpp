@@ -17,7 +17,7 @@ int main() {
   cout << "account3 balance: $" << account3 << endl;
   cout << "account2 balance: $" << account2 << endl;
 
-  double debit1 = 1, debit2 = 1, debit3 = 1;
+  double debit1 = 3.0, debit2 = 3.0, debit3 = 3.0;
 
   cout << "\nAttempting to debit " << debit1 << " from account1." << endl;
   account1 -= debit1;
@@ -30,10 +30,11 @@ int main() {
   cout << "account2 balance: $" << account2 << endl;
   cout << "account3 balance: $" << account3 << endl;
 
-  double credit1 = 1.0, credit2 = 1.0, credit3 = 1.0;
+  double credit1 = 3.0, credit2 = 1.0, credit3 = 1.0;
   cout << "\nCrediting " << credit1 << " to account1." << endl;
-  account1 += credit1;
-
+  account1 += credit1 / 3;
+  account1 = credit1 / 3 + account1;
+  account1 = account1 + credit1 / 3;
   cout << "\nCrediting " << credit2 << " to account2." << endl;
   account2 += credit2;
   cout << "\nCrediting " << credit3 << " to account3." << endl;
