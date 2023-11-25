@@ -6,29 +6,24 @@
 using namespace std;
 
 int main() {
-  Account account1(5.0);              // create Account object
-  SavingsAccount account2(5.0, .0);   // create SavingsAccount object
-  CheckingAccount account3(5.0, 1.0); // create CheckingAccount object
-
+  Account account1(6000.0);
+  SavingsAccount account2(500.0, .0);
+  CheckingAccount account3(5.0, 1.0);
   cout << fixed << setprecision(2);
+  cout << "account1 balance: $" << account1 << "\n"
+       << "account3 balance: $" << account3 << "\n"
+       << "account2 balance: $" << account2 << "\n";
 
-  cout << "account1 balance: $" << account1 << endl;
-  cout << "account3 balance: $" << account3 << endl;
-  cout << "account2 balance: $" << account2 << endl;
-
-  double debit1 = 3.0, debit2 = 3.0, debit3 = 3.0;
-
+  double debit1 = 3000.0, debit2 = 3.0, debit3 = 3.0;
   cout << "\nAttempting to debit " << debit1 << " from account1." << endl;
   account1 -= debit1;
   cout << "\nAttempting to debit " << debit2 << " from account2." << endl;
   account2 -= debit2;
   cout << "\nAttempting to debit " << debit3 << " from account3." << endl;
   account3 -= debit3;
-
-  cout << "\naccount1 balance: $" << account1 << endl;
-  cout << "account2 balance: $" << account2 << endl;
-  cout << "account3 balance: $" << account3 << endl;
-
+  cout << "account1 balance: $" << account1 << "\n"
+       << "account3 balance: $" << account3 << "\n"
+       << "account2 balance: $" << account2 << "\n";
   double credit1 = 3.0, credit2 = 3.0, credit3 = 3.0;
   cout << "\nCrediting " << credit1 << " to account1." << endl;
   // 8. Demonstrate the compound addition operator.
@@ -48,10 +43,9 @@ int main() {
   account3 += credit3 / 3.0;
   account3 = credit3 / 3.0 + account3;
   account3 = account3 + credit3 / 3.0;
-
-  cout << "\naccount1 balance: $" << account1 << endl;
-  cout << "account2 balance: $" << account2.getBalance() << endl;
-  cout << "account3 balance: $" << account3.getBalance() << endl;
+  cout << "account1 balance: $" << account1 << "\n"
+       << "account3 balance: $" << account3 << "\n"
+       << "account2 balance: $" << account2 << "\n";
 
   double interestEarned = account2.calculateInterest();
   cout << "\nAdding $" << interestEarned << " interest to account2." << endl;
